@@ -1,6 +1,5 @@
 import React from 'react';
 import successImage from '../assets/success.png';
-import LaddaButton from "react-ladda";
 import {history} from "../App";
 
 function Success() {
