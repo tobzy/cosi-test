@@ -121,7 +121,7 @@ function EnterDetails(props: Props) {
         <div>
             {isUnderReview ?
                 <h2 className="review-form-heading">Please review your information!</h2> :
-                <h2>Hi, Mr {props.user.name}!</h2>}
+                <h2>Hi, Mr {props.user.lastName}!</h2>}
             <Formik
                 initialValues={initialState}
                 validationSchema={validation}

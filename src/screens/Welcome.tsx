@@ -57,7 +57,7 @@ export function Welcome(props: Props) {
         user.lastName = lastName
         setLoading(false);
         props.saveUserDetails(user)
-        history.replace('/enter-details');
+        history.push('/enter-details');
     };
 
     return (
