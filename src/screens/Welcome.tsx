@@ -63,7 +63,7 @@ export function Welcome(props: Props) {
     return (
         <form className='welcome-page'>
             <div className='image-container'>
-                <img src={flightImage} width={100}/>
+                <img src={flightImage} width={100}  alt={'Logo'}/>
             </div>
             <h2>Welcome to your Web Check-in</h2>
             <div className="form-group">

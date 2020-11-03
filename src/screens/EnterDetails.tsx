@@ -75,7 +75,7 @@ function EnterDetails(props: Props) {
         return await response.json();
     }
 
-    const {data = [], error} = useSWR('fetchCountries', fetchCountries);
+    const {data = []} = useSWR('fetchCountries', fetchCountries);
 
 
     const onSubmit = (values: object) => {
