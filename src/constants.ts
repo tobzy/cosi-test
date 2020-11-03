@@ -1,1 +1,1 @@
-export const baseUrl:string = 'https://app.fakejson.com/q/CGt1OGSv?token=71j5cw7g_57o9FZAISCcNg' //fake json API
+export const baseUrl:string = 'https://api.mocki.io/v1/cc824671' //fake json API
