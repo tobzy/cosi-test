@@ -4,7 +4,7 @@ import {baseUrl} from "../constants";
 import {history} from "../App";
 import {connect} from 'react-redux'
 import flightImage from '../assets/flight.gif';
-import axios from 'axios'
+import {axiosInstance} from "../axiosClient";
 
 import {saveUserDetails} from "../redux/actions";
 
@@ -39,7 +39,7 @@ export function Welcome(props: Props) {
         if (validateForm()) return;
         setLoading(true);
 
-        axios.post(baseUrl, {
+        axiosInstance.post(baseUrl, {
             "id": "personNickname",
             "email": "internetEmail",
             "name": "nameFirst",
@@ -51,7 +51,9 @@ export function Welcome(props: Props) {
             props.saveUserDetails(user)
             history.push('/enter-details');
         }).catch(err => {
-            alert("Error")
+            // alert(err)
+            console.log(err.response)
+            console.log(err.message)
         })
 
 
