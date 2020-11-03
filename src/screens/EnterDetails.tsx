@@ -7,6 +7,8 @@ import * as Yup from 'yup';
 
 import {useHistory} from "react-router-dom";
 import {connect} from "react-redux";
+import axios from "axios";
+import {history} from "../App";
 
 
 type Props = {
@@ -71,8 +73,9 @@ function EnterDetails(props: Props) {
 
 
     const fetchCountries = async () => {
-        const response = await fetch('https://restcountries.eu/rest/v2/all')
-        return await response.json();
+        return   axios.get('https://restcountries.eu/rest/v2/all', ).then(res => res.data)
+        // const response = await fetch('https://restcountries.eu/rest/v2/all')
+        // return await response.json();
     }
 
     const {data = []} = useSWR('fetchCountries', fetchCountries);
@@ -88,18 +91,14 @@ function EnterDetails(props: Props) {
 
     const saveToServer = async (values: object) => {
         setLoading(true)
-        const response = await fetch(`${baseUrl}`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json; charset=UTF-8",
-            },
-            body: JSON.stringify({
-                ...values
-            }),
-        });
-        setLoading(false);
-        history.push('/success')
-        return await response.json();
+        axios.post(baseUrl, {
+            ...values
+        }).then(response => {
+            setLoading(false);
+            history.push('/success');
+        }).catch(err => {
+            alert("Error")
+        })
     };
 
     // Synchronous validation function for dynamic inputs

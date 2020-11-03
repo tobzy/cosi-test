@@ -4,6 +4,7 @@ import {baseUrl} from "../constants";
 import {history} from "../App";
 import {connect} from 'react-redux'
 import flightImage from '../assets/flight.gif';
+import axios from 'axios'
 
 import {saveUserDetails} from "../redux/actions";
 
@@ -37,24 +38,23 @@ export function Welcome(props: Props) {
         e.preventDefault();
         if (validateForm()) return;
         setLoading(true);
-        const response = await fetch(`${baseUrl}`, {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json; charset=UTF-8",
-            },
-            body: JSON.stringify({
-                "id": "personNickname",
-                "email": "internetEmail",
-                "name": "nameFirst",
-                "gender": "personGender",
-            }),
-        });
 
-        const user = await response.json();
-        user.lastName = lastName
-        setLoading(false);
-        props.saveUserDetails(user)
-        history.push('/enter-details');
+        axios.post(baseUrl, {
+            "id": "personNickname",
+            "email": "internetEmail",
+            "name": "nameFirst",
+            "gender": "personGender",
+        }).then(response => {
+            setLoading(false);
+            const user = {...response.data};
+            user.lastName = lastName
+            props.saveUserDetails(user)
+            history.push('/enter-details');
+        }).catch(err => {
+            alert("Error")
+        })
+
+
     };
 
     return (
