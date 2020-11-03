@@ -20,7 +20,7 @@ This project was generated with [Create React App](https://reactjs.org/docs/crea
 
 #### How to setup
 - Clone repository
-- Do an `npm install`
+- Do an `yarn install`
 - Run `yarn start` to start a dev server. This runs the app in the development mode.\
   Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
   The page will reload if you make edits.\
