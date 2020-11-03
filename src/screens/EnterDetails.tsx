@@ -94,13 +94,7 @@ function EnterDetails(props: Props) {
                 "Content-type": "application/json; charset=UTF-8",
             },
             body: JSON.stringify({
-                "token": "71j5cw7g_57o9FZAISCcNg",
-                "data": {
-                    ...values,
-                    "id": "personNickname",
-                    "email": "internetEmail",
-                    "gender": "personGender",
-                }
+                ...values
             }),
         });
         setLoading(false);

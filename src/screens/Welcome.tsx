@@ -33,7 +33,7 @@ export function Welcome(props: Props) {
         return error
     }
 
-    const checkIn = async (e:Event) => {
+    const checkIn = async (e: Event) => {
         e.preventDefault();
         if (validateForm()) return;
         setLoading(true);
@@ -43,13 +43,10 @@ export function Welcome(props: Props) {
                 "Content-type": "application/json; charset=UTF-8",
             },
             body: JSON.stringify({
-                "token": "71j5cw7g_57o9FZAISCcNg",
-                "data": {
-                    "id": "personNickname",
-                    "email": "internetEmail",
-                    "name": "nameFirst",
-                    "gender": "personGender",
-                }
+                "id": "personNickname",
+                "email": "internetEmail",
+                "name": "nameFirst",
+                "gender": "personGender",
             }),
         });
 
@@ -63,7 +60,7 @@ export function Welcome(props: Props) {
     return (
         <form className='welcome-page'>
             <div className='image-container'>
-                <img src={flightImage} width={100}  alt={'Logo'}/>
+                <img src={flightImage} width={100} alt={'Logo'}/>
             </div>
             <h2>Welcome to your Web Check-in</h2>
             <div className="form-group">
