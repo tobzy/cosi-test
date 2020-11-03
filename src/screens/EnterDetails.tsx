@@ -5,7 +5,6 @@ import useSWR from 'swr';
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 
-import {useHistory} from "react-router-dom";
 import {connect} from "react-redux";
 import axios from "axios";
 import {history} from "../App";
@@ -18,7 +17,6 @@ type Props = {
 
 function EnterDetails(props: Props) {
 
-    const history = useHistory();
     const [loading, setLoading] = useState(false);
     const [isUnderReview, setIsUnderReview] = useState(false);
 
