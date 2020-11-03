@@ -3,7 +3,7 @@
 A check-in  application that allows a user to provide his flight number and last name. Afterwards, they fill a simple form with basic information based on their nationality.The user would be able to review the information before confirming. In the last step, the user  sees the confirmation page. 
 
 #### Demo
-A demo for this application can be found [here](http://my-movies-collection.surge.sh/).
+A demo for this application can be found [here](https://festive-hermann-3dd25b.netlify.app/).
 
 #### Tools:
 This project was generated with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
