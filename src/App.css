@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+.container {
+    max-width: 360px;
+    margin: auto;
+    padding: 0 15px;
+    margin-top: 50px;
+}
+.welcome-page .image-container{
+    text-align: center;
+    width: 100%;
+}
+h2 {
+    margin: 20px 0;
+    font-size: 22px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label {
+    text-align: left;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    padding: 0 0 10px;
+    max-width: 100%;
+    display: block;
+    font-weight: 400;
+    color: #3a3a3a;
+    font-size: 14px;
+    text-transform: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control, input {
+    box-shadow: none;
 }
 
-.App-link {
-  color: #61dafb;
+.form-control {
+    border: 1px solid #d1d1d1;
+    background-color: #fff;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: black;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+    border: 1px solid #3b7cec;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+
+.review-form .form-control{
+    border: 1px solid #3b7ceb;
+}
+.review-form-heading{
+    color: #3b7ceb;
+}
+.form-control:disabled {
+    color: grey;
+}
+
+.primary-button {
+    background-color: #3b7cec;
+    border: 1px solid #3b7cec;
+    font-size: 20px;
+    color: #fff;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    width: 100%;
+    text-transform: none;
+    height: 50px;
+    border-radius: 3px;
+
+}
+
+.error {
+    font-size: 13px;
+    color: #e04747;
+    font-weight: 600;
+}
+.terms{
+    color: #3b7cec;
+    margin-left: 10px;
+    display: inline-block;
 }

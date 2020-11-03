@@ -1,0 +1,1 @@
+export const baseUrl:String = 'https://app.fakejson.com/q' //fake json API
