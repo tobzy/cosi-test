@@ -13,6 +13,7 @@ This project was generated with [Create React App](https://reactjs.org/docs/crea
 - [TypeScript](https://www.typescriptlang.org/)
 - [SWR](https://swr.vercel.app/)
 - [Redux](http://redux.js.org/)
+- [Fake Json](https://fakejson.com/)
 - [Nelify](https://netlify.com/)( for deployment )
 
 
